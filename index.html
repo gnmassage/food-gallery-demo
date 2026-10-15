@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Gallery - დაბალანსებული კვება</title>
-    <!-- Tailwind CSS (Direct CDN) -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -25,7 +25,7 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950 min-h-screen">
 
-    <!-- 1. Header -->
+    <!-- Header -->
     <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
         <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
@@ -38,8 +38,9 @@
             </div>
             
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-                <a href="#comparison" class="hover:text-emerald-400 transition-colors">უპირატესობები</a>
+                <a href="#advantages" class="hover:text-emerald-400 transition-colors">უპირატესობები</a>
                 <a href="#calculator" class="hover:text-emerald-400 transition-colors">კალკულატორი</a>
+                <a href="#faq" class="hover:text-emerald-400 transition-colors">FAQ</a>
             </nav>
 
             <a href="https://wa.me/" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold px-5 py-2.5 rounded-full text-sm transition-all shadow-lg shadow-emerald-500/25">
@@ -49,12 +50,12 @@
         </div>
     </header>
 
-    <!-- 2. Hero Section -->
-    <section class="relative pt-16 pb-24 md:pt-28 md:pb-36 overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative pt-16 pb-20 md:pt-28 md:pb-32 overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs md:text-sm font-medium mb-8">
-                <i data-lucide="sparkles" class="w-4 h-4"></i>
-                <span>დაბალანსებული კვების ახალი სტანდარტი</span>
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+                <span>თბილისი • ბათუმი • ქუთაისი • თელავი • რუსთავი</span>
             </div>
             
             <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-tight mb-8">
@@ -74,19 +75,70 @@
         </div>
     </section>
 
-    <!-- 3. Comparison Section -->
-    <section id="comparison" class="py-20 bg-slate-900/50 border-y border-slate-800/60">
-        <div class="max-w-5xl mx-auto px-4">
+    <!-- Key Advantages (Grid) -->
+    <section id="advantages" class="py-20 bg-slate-900/40 border-t border-slate-800/60">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">
-                    რა იცვლება თქვენს ცხოვრებაში?
+                    რატომ ირჩევენ Food Gallery-ს?
                 </h2>
-                <p class="text-slate-400">შეადარეთ ჩვეულებრივი ყოველდღიურობა Food Gallery-ს სერვისს</p>
+                <p class="text-slate-400">ყველაფერი შექმნილია თქვენი მაქსიმალური კომფორტისთვის</p>
             </div>
 
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Advantage 1 -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="truck" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">5 ქალაქში მიწოდება</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        ყოველდღიური დილის სერვისი თბილისში, ბათუმში, ქუთაისში, თელავსა და რუსთავში.
+                    </p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="credit-card" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">ნაწილ-ნაწილ გადახდა</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        შეიძინეთ თვიური პაკეტი 0%-იანი განვადებით/ნაწილ-ნაწილ გადახდით ბანკების მეშვეობით.
+                    </p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="utensils" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">მრავალფეროვანი მენიუ</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        შეფ-მზარეულის რეცეპტები, რომლებიც 2 კვირის განმავლობაში არ მეორდება.
+                    </p>
+                </div>
+
+                <!-- Advantage 4 -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">ზუსტი BJU ბალანსი</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        ნუტრიციოლოგის მიერ გათვლილი ცილები, ცხიმები და ნახშირწყლები თითოეულ ულუფაში.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neuro-Comparison -->
+    <section class="py-20 bg-slate-950 border-t border-slate-800/60">
+        <div class="max-w-5xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Old Way -->
-                <div class="bg-slate-950/60 border border-red-500/20 rounded-3xl p-8">
+                <div class="bg-slate-900/60 border border-red-500/20 rounded-3xl p-8">
                     <div class="text-red-400 font-bold text-sm tracking-wider uppercase mb-6 flex items-center gap-2">
                         <i data-lucide="x-circle" class="w-5 h-5"></i>
                         <span>ჩვეულებრივი რუტინა</span>
@@ -132,8 +184,8 @@
         </div>
     </section>
 
-    <!-- 4. Calculator -->
-    <section id="calculator" class="py-24">
+    <!-- Calculator -->
+    <section id="calculator" class="py-24 bg-slate-900/30">
         <div class="max-w-3xl mx-auto px-4">
             <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl">
                 <div class="text-center mb-10">
@@ -175,11 +227,52 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 border-t border-slate-800/60">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white mb-4">ხშირად დასმული შეკითხვები</h2>
+                <p class="text-slate-400 text-sm">ყველაფერი, რაც უნდა იცოდეთ სერვისის შესახებ</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                    <h3 class="font-bold text-white text-lg mb-2">როდის და როგორ ხდება ადგილზე მიტანა?</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        მიწოდება ხორციელდება ყოველდღიურად დილის ინტერვალში (07:00-დან 10:00 საათამდე). კურიერი მოგიტანთ მთელი დღის გამზადებულ, პორციულ კონტეინერებს თქვენთვის სასურველ მისამართზე.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                    <h3 class="font-bold text-white text-lg mb-2">როგორ მუშაობს ნაწილ-ნაწილ გადახდა?</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        თვიური პაკეტის არჩევისას შეგიძლიათ ისარგებლოთ საქართველოს ბანკის ან თიბისის ნაწილ-ნაწილ გადახდის სისტემით (0%-იანი განვადება). თანხა იყოფა 4 ან 6 თვეზე ყოველგვარი გაძვირების გარეშე.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                    <h3 class="font-bold text-white text-lg mb-2">რომელ ქალაქებში ოპერირებს Food Gallery?</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        ჩვენი სერვისი აქტიურად მიეწოდება თბილისში, ბათუმში, ქუთაისში, თელავსა და რუსთავში.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                    <h3 class="font-bold text-white text-lg mb-2">შეიძლება თუ არა პროდუქტების ამოღება ან ჩანაცვლება?</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        დიახ! შეკვეთის გაფორმებისას შეგიძლიათ მიუთითოთ ალერგიები ან პროდუქტები, რომლებსაც არ მიირთმევთ (მაგ. რძის ნაწარმი, თხილეული, ზღვის პროდუქტები) და ჩვენი შეფ-მზარეული ჩაანაცვლებს მათ.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="border-t border-slate-900 py-8 text-center text-slate-600 text-xs">
         <p>© 2026 Food Gallery. ყველა უფლება დაცულია.</p>
     </footer>
 
-    <!-- Simple JS for Calculator & Icons -->
+    <!-- JS for Calculator & Icons -->
     <script>
         lucide.createIcons();
         
