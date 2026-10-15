@@ -29,14 +29,13 @@
 </head>
 <body class="bg-lux-bg text-slate-100 font-sans antialiased min-h-screen selection:bg-lux-emerald selection:text-slate-950">
 
-    <!-- 1. 3-Second Splash Screen / Preloader (Prominent Large Logo Matching Slogan Width) -->
+    <!-- 1. 3-Second Splash Screen / Preloader -->
     <div id="splash-screen" class="fixed inset-0 z-[100] bg-lux-bg flex flex-col items-center justify-center transition-opacity duration-1000 p-6 text-center">
         <div class="relative flex flex-col items-center max-w-md w-full mx-auto">
-            <!-- PROMINENT LARGE LOGO -->
             <div class="w-72 h-72 md:w-96 md:h-96 mb-2 flex items-center justify-center drop-shadow-[0_0_50px_rgba(16,185,129,0.45)]">
                 <img src="logo.png" onerror="this.onerror=null; this.src='https://placehold.co/350x350/090a0f/10b981?text=FOOD+GALLERY';" alt="Food Gallery Logo" class="w-full h-full object-contain" />
             </div>
-            <p class="text-lux-glow text-base md:text-lg font-light italic tracking-wide leading-relaxed px-2">
+            <p id="splash-quote" class="text-lux-glow text-base md:text-lg font-light italic tracking-wide leading-relaxed px-2">
                 "შენი დრო უფრო ღირებულია, ვიდრე სამზარეულოში გატარებული საათები."
             </p>
         </div>
@@ -46,10 +45,10 @@
     <header class="sticky top-0 z-50 backdrop-blur-xl bg-lux-bg/80 border-b border-lux-border/60">
         <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-12 h-12 flex items-center justify-center drop-shadow-[0_0_15px_rgba(16,185,129,0.25)]">
+                <div class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center drop-shadow-[0_0_15px_rgba(16,185,129,0.25)]">
                     <img src="logo.png" onerror="this.onerror=null; this.src='https://placehold.co/100x100/090a0f/10b981?text=FG';" alt="Logo" class="w-full h-full object-contain" />
                 </div>
-                <span class="font-black text-xl tracking-wider text-white">FOOD GALLERY</span>
+                <span class="font-black text-lg md:text-xl tracking-wider text-white">FOOD GALLERY</span>
             </div>
             
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
@@ -60,7 +59,7 @@
                 <a href="#faq" id="nav-faq" class="hover:text-lux-glow transition-colors">კითხვები</a>
             </nav>
 
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3 md:gap-4">
                 <!-- Language Switcher -->
                 <div class="flex items-center bg-lux-card border border-lux-border rounded-full p-1 text-xs font-semibold text-slate-400">
                     <button onclick="setLang('ka')" id="lang-ka" class="px-2.5 py-1 rounded-full bg-lux-emerald text-slate-950 font-bold transition-all">KA</button>
@@ -68,33 +67,33 @@
                     <button onclick="setLang('ru')" id="lang-ru" class="px-2.5 py-1 rounded-full hover:text-white transition-all">RU</button>
                 </div>
 
-                <a href="https://wa.me/" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-lux-emerald hover:bg-lux-glow text-slate-950 font-bold px-5 py-2.5 rounded-full text-sm transition-all shadow-lg shadow-lux-emerald/20">
-                    <i data-lucide="sparkles" class="w-4 h-4"></i>
-                    <span id="btn-consult">უფასო კონსულტაცია</span>
+                <a href="https://wa.me/" target="_blank" class="inline-flex items-center gap-2 bg-lux-emerald hover:bg-lux-glow text-slate-950 font-bold px-3.5 md:px-5 py-2 md:py-2.5 rounded-full text-xs md:text-sm transition-all shadow-lg shadow-lux-emerald/20">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 md:w-4 md:h-4"></i>
+                    <span id="btn-consult">კონსულტაცია</span>
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative pt-20 pb-24 md:pt-32 md:pb-36 overflow-hidden">
-        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-lux-emerald/10 blur-[160px] pointer-events-none rounded-full"></div>
+    <section class="relative pt-12 pb-20 md:pt-32 md:pb-36 overflow-hidden">
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[500px] h-[350px] md:h-[500px] bg-lux-emerald/10 blur-[140px] pointer-events-none rounded-full"></div>
 
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lux-card border border-lux-border text-lux-glow text-xs md:text-sm font-medium mb-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lux-card border border-lux-border text-lux-glow text-xs md:text-sm font-medium mb-6 md:mb-8">
                 <i data-lucide="crown" class="w-4 h-4 text-lux-gold"></i>
                 <span id="hero-tag">ჯანსაღი და გემრიელი კვების მიწოდება</span>
             </div>
             
-            <h1 id="hero-title" class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.15] mb-8">
+            <h1 id="hero-title" class="text-3xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.2] mb-6 md:mb-8">
                 თქვენ იხდით არა უბრალოდ საკვებში, არამედ <span class="bg-gradient-to-r from-lux-emerald via-lux-glow to-teal-200 bg-clip-text text-transparent">დაზოგილ დროში</span>
             </h1>
             
-            <p id="hero-desc" class="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10 font-normal">
+            <p id="hero-desc" class="text-base md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-8 md:mb-10 font-normal px-2">
                 დაივიწყეთ ყოველდღიური ფიქრი — "რა მოვამზადო დღეს?". მიიღეთ შეფ-მზარეულის მიერ მომზადებული, ჯანსაღი და დაბალანსებული საჭმელი პირდაპირ თქვენს სახლში.
             </p>
 
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 md:mb-16">
                 <a href="#calculator" class="w-full sm:w-auto bg-lux-emerald hover:bg-lux-glow text-slate-950 font-black px-8 py-4 rounded-2xl text-base transition-all shadow-xl shadow-lux-emerald/20 flex items-center justify-center gap-2">
                     <span id="hero-calc-btn">შეარჩიე შენი მენიუ</span>
                     <i data-lucide="arrow-right" class="w-5 h-5"></i>
@@ -102,17 +101,17 @@
             </div>
 
             <!-- Metrics -->
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 pt-10 border-t border-lux-border/60 max-w-3xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 pt-8 md:pt-10 border-t border-lux-border/60 max-w-3xl mx-auto">
                 <div>
-                    <div class="text-2xl md:text-3xl font-black text-white">50,000+</div>
+                    <div class="text-xl md:text-3xl font-black text-white">50,000+</div>
                     <div id="stat-1" class="text-xs text-slate-400 mt-1">ჩააბარებული შეკვეთა</div>
                 </div>
                 <div>
-                    <div class="text-2xl md:text-3xl font-black text-lux-glow">98%</div>
+                    <div class="text-xl md:text-3xl font-black text-lux-glow">98%</div>
                     <div id="stat-2" class="text-xs text-slate-400 mt-1">კმაყოფილი კლიენტი</div>
                 </div>
                 <div class="col-span-2 md:col-span-1">
-                    <div class="text-2xl md:text-3xl font-black text-white">5 ქალაქი</div>
+                    <div class="text-xl md:text-3xl font-black text-white">5 ქალაქი</div>
                     <div id="stat-3" class="text-xs text-slate-400 mt-1">ყოველდღიური მიწოდება</div>
                 </div>
             </div>
@@ -120,9 +119,9 @@
     </section>
 
     <!-- Philosophy Section -->
-    <section id="philosophy" class="py-20 bg-lux-card/40 border-y border-lux-border">
+    <section id="philosophy" class="py-16 md:py-20 bg-lux-card/40 border-y border-lux-border">
         <div class="max-w-5xl mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8 text-center md:text-left">
                 <div class="p-6 rounded-2xl bg-lux-card border border-lux-border/80">
                     <div class="w-12 h-12 rounded-xl bg-lux-emerald/10 text-lux-glow flex items-center justify-center mb-4 mx-auto md:mx-0">
                         <i data-lucide="brain" class="w-6 h-6"></i>
@@ -157,55 +156,55 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="proof" class="py-20">
+    <section id="proof" class="py-16 md:py-20">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 id="proof-title" class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 id="proof-title" class="text-2xl md:text-4xl font-extrabold text-white mb-3 md:mb-4">
                     რესტორნის გემო თქვენს სახლში
                 </h2>
-                <p id="proof-sub" class="text-slate-400">ყოველდღე ახალი, სუფთა და ძალიან გემრიელი კერძები</p>
+                <p id="proof-sub" class="text-slate-400 text-sm md:text-base">ყოველდღე ახალი, სუფთა და ძალიან გემრიელი კერძები</p>
             </div>
 
             <div class="grid sm:grid-cols-3 gap-6">
                 <div class="bg-lux-card border border-lux-border rounded-2xl p-4 text-center">
-                    <div class="h-48 rounded-xl bg-slate-900 border border-lux-border/50 mb-4 flex items-center justify-center text-slate-500 text-xs italic">
+                    <div class="h-40 md:h-48 rounded-xl bg-slate-900 border border-lux-border/50 mb-4 flex items-center justify-center text-slate-500 text-xs italic">
                         [ორაგულის სადილის ფოტო]
                     </div>
                     <h4 id="dish-1" class="font-bold text-white text-base">ორაგულის ფილე ბოსტნეულით</h4>
-                    <p class="text-xs text-lux-glow mt-1">450 კკალ • ცილა: 38გ | ცხიმი: 18გ | ნახშირწყალი: 22გ</p>
+                    <p id="dish-1-desc" class="text-xs text-lux-glow mt-1">450 კკალ • ცილა: 38გ | ცხიმი: 18გ | ნახშირწყალი: 22გ</p>
                 </div>
 
                 <div class="bg-lux-card border border-lux-border rounded-2xl p-4 text-center">
-                    <div class="h-48 rounded-xl bg-slate-900 border border-lux-border/50 mb-4 flex items-center justify-center text-slate-500 text-xs italic">
+                    <div class="h-40 md:h-48 rounded-xl bg-slate-900 border border-lux-border/50 mb-4 flex items-center justify-center text-slate-500 text-xs italic">
                         [საუზმის ფოტო]
                     </div>
                     <h4 id="dish-2" class="font-bold text-white text-base">პანკეიკი კენკრით და თაფლით</h4>
-                    <p class="text-xs text-lux-glow mt-1">320 კკალ • ცილა: 18გ | ცხიმი: 8გ | ნახშირწყალი: 42გ</p>
+                    <p id="dish-2-desc" class="text-xs text-lux-glow mt-1">320 კკალ • ცილა: 18გ | ცხიმი: 8გ | ნახშირწყალი: 42გ</p>
                 </div>
 
                 <div class="bg-lux-card border border-lux-border rounded-2xl p-4 text-center">
-                    <div class="h-48 rounded-xl bg-slate-900 border border-lux-border/50 mb-4 flex items-center justify-center text-slate-500 text-xs italic">
+                    <div class="h-40 md:h-48 rounded-xl bg-slate-900 border border-lux-border/50 mb-4 flex items-center justify-center text-slate-500 text-xs italic">
                         [ვახშმის ფოტო]
                     </div>
                     <h4 id="dish-3" class="font-bold text-white text-base">საქონლის სტეიკი კინოასთან ერთად</h4>
-                    <p class="text-xs text-lux-glow mt-1">510 კკალ • ცილა: 42გ | ცხიმი: 20გ | ნახშირწყალი: 30გ</p>
+                    <p id="dish-3-desc" class="text-xs text-lux-glow mt-1">510 კკალ • ცილა: 42გ | ცხიმი: 20გ | ნახშირწყალი: 30გ</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Key Advantages -->
-    <section id="advantages" class="py-20 bg-lux-card/30 border-t border-lux-border">
+    <section id="advantages" class="py-16 md:py-20 bg-lux-card/30 border-t border-lux-border">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 id="adv-title" class="text-3xl md:text-4xl font-extrabold text-white mb-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 id="adv-title" class="text-2xl md:text-4xl font-extrabold text-white mb-3 md:mb-4">
                     რატომ არის ჩვენი სერვისი საუკეთესო?
                 </h2>
-                <p id="adv-subtitle" class="text-slate-400">ყველაფერი გათვლილია თქვენს კომფორტზე</p>
+                <p id="adv-subtitle" class="text-slate-400 text-sm md:text-base">ყველაფერი გათვლილია თქვენს კომფორტზე</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-lux-card border border-lux-border p-8 rounded-3xl">
+                <div class="bg-lux-card border border-lux-border p-6 md:p-8 rounded-3xl">
                     <div class="w-12 h-12 bg-lux-emerald/10 text-lux-glow rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="map-pin" class="w-6 h-6"></i>
                     </div>
@@ -215,7 +214,7 @@
                     </p>
                 </div>
 
-                <div class="bg-lux-card border border-lux-border p-8 rounded-3xl">
+                <div class="bg-lux-card border border-lux-border p-6 md:p-8 rounded-3xl">
                     <div class="w-12 h-12 bg-lux-emerald/10 text-lux-glow rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="utensils-crossed" class="w-6 h-6"></i>
                     </div>
@@ -225,7 +224,7 @@
                     </p>
                 </div>
 
-                <div class="bg-lux-card border border-lux-border p-8 rounded-3xl">
+                <div class="bg-lux-card border border-lux-border p-6 md:p-8 rounded-3xl">
                     <div class="w-12 h-12 bg-lux-emerald/10 text-lux-glow rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="target" class="w-6 h-6"></i>
                     </div>
@@ -239,10 +238,10 @@
     </section>
 
     <!-- Calculator -->
-    <section id="calculator" class="py-24 border-t border-lux-border">
+    <section id="calculator" class="py-16 md:py-24 border-t border-lux-border">
         <div class="max-w-3xl mx-auto px-4">
-            <div class="bg-lux-card border border-lux-border rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-                <div class="text-center mb-10">
+            <div class="bg-lux-card border border-lux-border rounded-3xl p-6 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="text-center mb-8 md:mb-10">
                     <h2 id="calc-head" class="text-2xl md:text-3xl font-extrabold text-white mb-3">
                         გამოითვალე შენი კალორიები
                     </h2>
@@ -264,14 +263,14 @@
                         <div id="calc-lbl-norm" class="text-xs text-slate-400 uppercase tracking-widest mb-1">
                             შენთვის რეკომენდებული ოდენობა:
                         </div>
-                        <div class="text-4xl font-black text-white my-2">
-                            ~<span id="calories">1840</span> <span id="calc-kcal-unit" class="text-lux-glow text-xl font-bold">კკალ/დღე</span>
+                        <div class="text-3xl md:text-4xl font-black text-white my-2">
+                            ~<span id="calories">1840</span> <span id="calc-kcal-unit" class="text-lux-glow text-lg md:text-xl font-bold">კკალ/დღე</span>
                         </div>
                         <p id="calc-includes" class="text-xs text-slate-400 mb-6 font-normal">
                             მოიცავს დღიურ 3-4-ჯერად მზა კვებას
                         </p>
 
-                        <a id="order-btn" href="https://wa.me/?text=გამარჯობა, გამოვთვალე ჩემი რაციონი: 1840 კკალ." target="_blank" class="w-full bg-lux-emerald hover:bg-lux-glow text-slate-950 font-black py-4 px-6 rounded-xl text-sm transition-all inline-flex items-center justify-center gap-2 shadow-lg shadow-lux-emerald/20">
+                        <a id="order-btn" href="https://wa.me/?text=გამარჯობა, გამოვთვალე ჩემი რაციონი: 1840 კკალ." target="_blank" class="w-full bg-lux-emerald hover:bg-lux-glow text-slate-950 font-black py-3.5 md:py-4 px-6 rounded-xl text-sm transition-all inline-flex items-center justify-center gap-2 shadow-lg shadow-lux-emerald/20">
                             <i data-lucide="message-circle" class="w-4 h-4"></i>
                             <span id="calc-order-text">ამ პაკეტის შეკვეთა ჩატში</span>
                         </a>
@@ -282,30 +281,30 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-20 border-t border-lux-border">
+    <section id="faq" class="py-16 md:py-20 border-t border-lux-border">
         <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 id="faq-title" class="text-3xl font-extrabold text-white mb-4">ხშირად დასმული კითხვები</h2>
+            <div class="text-center mb-12 md:mb-16">
+                <h2 id="faq-title" class="text-2xl md:text-3xl font-extrabold text-white mb-3">ხშირად დასმული კითხვები</h2>
                 <p id="faq-sub" class="text-slate-400 text-sm">ყველაფერი, რაც აინტერესებთ ჩვენს კლიენტებს</p>
             </div>
 
             <div class="space-y-4">
                 <div class="bg-lux-card border border-lux-border rounded-2xl p-6">
-                    <h3 id="faq-q1" class="font-bold text-white text-lg mb-2">როდის და როგორ მოგვაქვს საჭმელი?</h3>
+                    <h3 id="faq-q1" class="font-bold text-white text-base md:text-lg mb-2">როდის და როგორ მოგვაქვს საჭმელი?</h3>
                     <p id="faq-a1" class="text-slate-300 text-sm leading-relaxed font-normal">
                         მიწოდება ხდება ყოველ დილით, 07:00-დან 10:00 საათამდე. კურიერი მოგიტანთ მთელი დღის გამზადებულ საჭმელს თქვენს კარამდე.
                     </p>
                 </div>
 
                 <div class="bg-lux-card border border-lux-border rounded-2xl p-6">
-                    <h3 id="faq-q2" class="font-bold text-white text-lg mb-2">რომელ ქალაქებში მუშაობს Food Gallery?</h3>
+                    <h3 id="faq-q2" class="font-bold text-white text-base md:text-lg mb-2">რომელ ქალაქებში მუშაობს Food Gallery?</h3>
                     <p id="faq-a2" class="text-slate-300 text-sm leading-relaxed font-normal">
                         ჩვენი სერვისი მოქმედებს თბილისში, ბათუმში, ქუთაისში, თელავსა და რუსთავში.
                     </p>
                 </div>
 
                 <div class="bg-lux-card border border-lux-border rounded-2xl p-6">
-                    <h3 id="faq-q3" class="font-bold text-white text-lg mb-2">შეიძლება თუ არა საჭმლის შეცვლა, თუ რამე არ მიყვარს?</h3>
+                    <h3 id="faq-q3" class="font-bold text-white text-base md:text-lg mb-2">შეიძლება თუ არა საჭმლის შეცვლა, თუ რამე არ მიყვარს?</h3>
                     <p id="faq-a3" class="text-slate-300 text-sm leading-relaxed font-normal">
                         დიახ. შეკვეთისას შეგიძლიათ გვითხრათ, რა პროდუქტი არ გიყვართ ან რაზე გაქვთ ალერგია, და ჩვენი მზარეული სხვა გემრიელი ინგრედიენტით შეცვლის მას.
                     </p>
@@ -326,14 +325,17 @@
         // Splash Screen (3 seconds)
         setTimeout(() => {
             const splash = document.getElementById('splash-screen');
-            splash.style.opacity = '0';
-            setTimeout(() => splash.style.display = 'none', 1000);
+            if(splash) {
+                splash.style.opacity = '0';
+                setTimeout(() => splash.style.display = 'none', 1000);
+            }
         }, 3000);
 
         const i18n = {
             ka: {
+                splashQuote: '"შენი დრო უფრო ღირებულია, ვიდრე სამზარეულოში გატარებული საათები."',
                 navPhil: "რატომ ჩვენ?", navAdv: "უპირატესობები", navProof: "მენიუ", navCalc: "კალკულატორი", navFaq: "კითხვები",
-                btnConsult: "უფასო კონსულტაცია", heroTag: "ჯანსაღი და გემრიელი კვების მიწოდება",
+                btnConsult: "კონსულტაცია", heroTag: "ჯანსაღი და გემრიელი კვების მიწოდება",
                 heroTitle: 'თქვენ იხდით არა უბრალოდ საკვებში, არამედ <span class="bg-gradient-to-r from-lux-emerald via-lux-glow to-teal-200 bg-clip-text text-transparent">დაზოგილ დროში</span>',
                 heroDesc: 'დაივიწყეთ ყოველდღიური ფიქრი — "რა მოვამზადო დღეს?". მიიღეთ შეფ-მზარეულის მიერ მომზადებული, ჯანსაღი და დაბალანსებული საჭმელი პირდაპირ თქვენს სახლში.',
                 heroCalcBtn: "შეარჩიე შენი მენიუ",
@@ -342,7 +344,9 @@
                 phil2T: "+60 საათი თვეში", phil2D: "დაზოგეთ დრო, რომელსაც მაღაზიებში სიარულსა და კერძების მომზადებაში კარგავდით. დაუთმეთ ის ოჯახს.",
                 phil3T: "მეტი ენერგია", phil3D: "სწორად გადანაწილებული ცილები, ცხიმები და ნახშირწყლები მოგცემთ ძალას და ენერგიას მთელი დღე.",
                 proofTitle: "რესტორნის გემო თქვენს სახლში", proofSub: "ყოველდღე ახალი, სუფთა და ძალიან გემრიელი კერძები",
-                dish1: "ორაგულის ფილე ბოსტნეულით", dish2: "პანკეიკი კენკრით და თაფლით", dish3: "საქონლის სტეიკი კინოასთან ერთად",
+                dish1: "ორაგულის ფილე ბოსტნეულით", dish1Desc: "450 კკალ • ცილა: 38გ | ცხიმი: 18გ | ნახშირწყალი: 22გ",
+                dish2: "პანკეიკი კენკრით და თაფლით", dish2Desc: "320 კკალ • ცილა: 18გ | ცხიმი: 8გ | ნახშირწყალი: 42გ",
+                dish3: "საქონლის სტეიკი კინოასთან ერთად", dish3Desc: "510 კკალ • ცილა: 42გ | ცხიმი: 20გ | ნახშირწყალი: 30გ",
                 advTitle: "რატომ არის ჩვენი სერვისი საუკეთესო?", advSub: "ყველაფერი გათვლილია თქვენს კომფორტზე",
                 adv1T: "5 ქალაქში მიწოდება", adv1D: "ყოველ დილით მოგვაქვს საჭმელი თბილისში, ბათუმში, ქუთაისში, თელავსა და რუსთავში.",
                 adv2T: "შეფ-მზარეულის მენიუ", adv2D: "მრავალფეროვანი და გემრიელი საჭმელები, რომლებიც 2 კვირის განმავლობაში არ მეორდება.",
@@ -357,8 +361,9 @@
                 faqQ3: "შეიძლება თუ არა საჭმლის შეცვლა, თუ რამე არ მიყვარს?", faqA3: "დიახ. შეკვეთისას შეგიძლიათ გვითხრათ, რა პროდუქტი არ გიყვართ ან რაზე გაქვთ ალერგია, და ჩვენი მზარეული სხვა გემრიელი ინგრედიენტით შეცვლის მას."
             },
             en: {
+                splashQuote: '"Your time is worth more than hours spent in the kitchen."',
                 navPhil: "Why Us?", navAdv: "Advantages", navProof: "Menu", navCalc: "Calculator", navFaq: "FAQ",
-                btnConsult: "Free Consultation", heroTag: "Healthy & Delicious Food Delivery",
+                btnConsult: "Consultation", heroTag: "Healthy & Delicious Food Delivery",
                 heroTitle: 'You pay not just for food, but for <span class="bg-gradient-to-r from-lux-emerald via-lux-glow to-teal-200 bg-clip-text text-transparent">saved time</span>',
                 heroDesc: 'Forget daily worry — "What should I cook today?". Get chef-prepared, healthy meals delivered straight to your home.',
                 heroCalcBtn: "Choose Your Menu",
@@ -367,7 +372,9 @@
                 phil2T: "+60 Hours / Month", phil2D: "Save time spent in grocery stores and kitchens. Spend it with family.",
                 phil3T: "More Energy", phil3D: "Properly balanced proteins, fats, and carbs give you strength all day long.",
                 proofTitle: "Restaurant Taste at Home", proofSub: "Fresh, healthy, and delicious meals every day",
-                dish1: "Salmon Filet with Veggies", dish2: "Pancakes with Berries & Honey", dish3: "Beef Steak with Quinoa",
+                dish1: "Salmon Filet with Veggies", dish1Desc: "450 kcal • Protein: 38g | Fat: 18g | Carbs: 22g",
+                dish2: "Pancakes with Berries & Honey", dish2Desc: "320 kcal • Protein: 18g | Fat: 8g | Carbs: 42g",
+                dish3: "Beef Steak with Quinoa", dish3Desc: "510 kcal • Protein: 42g | Fat: 20g | Carbs: 30g",
                 advTitle: "Why is Our Service Best?", advSub: "Everything designed for your comfort",
                 adv1T: "Delivery in 5 Cities", adv1D: "Every morning we deliver to Tbilisi, Batumi, Kutaisi, Telavi, and Rustavi.",
                 adv2T: "Chef's Menu", adv2D: "Delicious food variety that does not repeat for 2 weeks.",
@@ -382,8 +389,9 @@
                 faqQ3: "Can I swap foods if I dislike something?", faqA3: "Yes. Tell us what you dislike or have allergies to, and our chef will replace it with another tasty ingredient."
             },
             ru: {
+                splashQuote: '"Ваше время стоит дороже, чем часы, проведенные на кухне."',
                 navPhil: "Почему мы?", navAdv: "Преимущества", navProof: "Меню", navCalc: "Калькулятор", navFaq: "Вопросы",
-                btnConsult: "Бесплатная консультация", heroTag: "Доставка здоровой и вкусной еды",
+                btnConsult: "Консультация", heroTag: "Доставка здоровой и вкусной еды",
                 heroTitle: 'Вы платите не просто за еду, а за <span class="bg-gradient-to-r from-lux-emerald via-lux-glow to-teal-200 bg-clip-text text-transparent">сэкономленное время</span>',
                 heroDesc: 'Забудьте о ежедневных мыслях — "Что приготовить сегодня?". Получайте готовую здоровую еду от шеф-повара прямо домой.',
                 heroCalcBtn: "Выбрать меню",
@@ -392,7 +400,9 @@
                 phil2T: "+60 часов в месяц", phil2D: "Экономьте время, потраченное в магазинах и у плиты. Посвятите его семье.",
                 phil3T: "Больше энергии", phil3D: "Правильно сбалансированные белки, жиры и углеводы дадут вам силы на весь день.",
                 proofTitle: "Вкус ресторана у вас дома", proofSub: "Свежие, полезные и вкусные блюда каждый день",
-                dish1: "Филе лосося с овощами", dish2: "Панкейки с ягодами и медом", dish3: "Стейк из говядины с киноа",
+                dish1: "Филе лосося с овощами", dish1Desc: "450 ккал • Белки: 38г | Жиры: 18г | Углеводы: 22г",
+                dish2: "Панкейки с ягодами и медом", dish2Desc: "320 ккал • Белки: 18г | Жиры: 8г | Углеводы: 42г",
+                dish3: "Стейк из говядины с киноа", dish3Desc: "510 ккал • Белки: 42г | Жиры: 20г | Углеводы: 30г",
                 advTitle: "Почему наш сервис лучший?", advSub: "Всё продумано для вашего удобства",
                 adv1T: "Доставка в 5 городах", adv1D: "Каждое утро привозим еду в Тбилиси, Батуми, Кутаиси, Телави и Рустави.",
                 adv2T: "Меню от шеф-повара", adv2D: "Разнообразная еда, которая не повторяется 2 недели.",
@@ -408,60 +418,75 @@
             }
         };
 
+        // Safe Text Update Helper
+        function updateText(id, value, isHTML = false) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (isHTML) el.innerHTML = value;
+                else el.textContent = value;
+            }
+        }
+
         function setLang(lang) {
             const data = i18n[lang];
             ['ka', 'en', 'ru'].forEach(l => {
                 const btn = document.getElementById(`lang-${l}`);
-                btn.className = (l === lang) ? "px-2.5 py-1 rounded-full bg-lux-emerald text-slate-950 font-bold transition-all" : "px-2.5 py-1 rounded-full hover:text-white transition-all";
+                if(btn) {
+                    btn.className = (l === lang) ? "px-2.5 py-1 rounded-full bg-lux-emerald text-slate-950 font-bold transition-all" : "px-2.5 py-1 rounded-full hover:text-white transition-all";
+                }
             });
 
-            document.getElementById('nav-phil').textContent = data.navPhil;
-            document.getElementById('nav-adv').textContent = data.navAdv;
-            document.getElementById('nav-proof').textContent = data.navProof;
-            document.getElementById('nav-calc').textContent = data.navCalc;
-            document.getElementById('nav-faq').textContent = data.navFaq;
-            document.getElementById('btn-consult').textContent = data.btnConsult;
-            document.getElementById('hero-tag').textContent = data.heroTag;
-            document.getElementById('hero-title').innerHTML = data.heroTitle;
-            document.getElementById('hero-desc').textContent = data.heroDesc;
-            document.getElementById('hero-calc-btn').textContent = data.heroCalcBtn;
-            document.getElementById('stat-1').textContent = data.stat1;
-            document.getElementById('stat-2').textContent = data.stat2;
-            document.getElementById('stat-3').textContent = data.stat3;
-            document.getElementById('phil-1-t').textContent = data.phil1T;
-            document.getElementById('phil-1-d').textContent = data.phil1D;
-            document.getElementById('phil-2-t').textContent = data.phil2T;
-            document.getElementById('phil-2-d').textContent = data.phil2D;
-            document.getElementById('phil-3-t').textContent = data.phil3T;
-            document.getElementById('phil-3-d').textContent = data.phil3D;
-            document.getElementById('proof-title').textContent = data.proofTitle;
-            document.getElementById('proof-sub').textContent = data.proofSub;
-            document.getElementById('dish-1').textContent = data.dish1;
-            document.getElementById('dish-2').textContent = data.dish2;
-            document.getElementById('dish-3').textContent = data.dish3;
-            document.getElementById('adv-title').textContent = data.advTitle;
-            document.getElementById('adv-subtitle').textContent = data.advSub;
-            document.getElementById('adv-1-t').textContent = data.adv1T;
-            document.getElementById('adv-1-d').textContent = data.adv1D;
-            document.getElementById('adv-2-t').textContent = data.adv2T;
-            document.getElementById('adv-2-d').textContent = data.adv2D;
-            document.getElementById('adv-3-t').textContent = data.adv3T;
-            document.getElementById('adv-3-d').textContent = data.adv3D;
-            document.getElementById('calc-head').textContent = data.calcHead;
-            document.getElementById('calc-sub').textContent = data.calcSub;
-            document.getElementById('calc-lbl-weight').textContent = data.calcLblWeight;
-            document.getElementById('calc-lbl-norm').textContent = data.calcLblNorm;
-            document.getElementById('calc-kcal-unit').textContent = data.calcKcalUnit;
-            document.getElementById('calc-includes').textContent = data.calcIncludes;
-            document.getElementById('calc-order-text').textContent = data.calcOrderText;
-            document.getElementById('faq-title').textContent = data.faqTitle;
-            document.getElementById('faq-sub').textContent = data.faqSub;
-            document.getElementById('faq-q1').textContent = data.faqQ1;
-            document.getElementById('faq-a1').textContent = data.faqA1;
-            document.getElementById('faq-q2').textContent = data.faqQ2;
-            document.getElementById('faq-a2').textContent = data.faqA2;
-            document.getElementById('faq-q3').textContent = data.faqQ3;
-            document.getElementById('faq-a3').textContent = data.faqA3;
+            updateText('splash-quote', data.splashQuote);
+            updateText('nav-phil', data.navPhil);
+            updateText('nav-adv', data.navAdv);
+            updateText('nav-proof', data.navProof);
+            updateText('nav-calc', data.navCalc);
+            updateText('nav-faq', data.navFaq);
+            updateText('btn-consult', data.btnConsult);
+            updateText('hero-tag', data.heroTag);
+            updateText('hero-title', data.heroTitle, true);
+            updateText('hero-desc', data.heroDesc);
+            updateText('hero-calc-btn', data.heroCalcBtn);
+            updateText('stat-1', data.stat1);
+            updateText('stat-2', data.stat2);
+            updateText('stat-3', data.stat3);
+            updateText('phil-1-t', data.phil1T);
+            updateText('phil-1-d', data.phil1D);
+            updateText('phil-2-t', data.phil2T);
+            updateText('phil-2-d', data.phil2D);
+            updateText('phil-3-t', data.phil3T);
+            updateText('phil-3-d', data.phil3D);
+            updateText('proof-title', data.proofTitle);
+            updateText('proof-sub', data.proofSub);
+            updateText('dish-1', data.dish1);
+            updateText('dish-1-desc', data.dish1Desc);
+            updateText('dish-2', data.dish2);
+            updateText('dish-2-desc', data.dish2Desc);
+            updateText('dish-3', data.dish3);
+            updateText('dish-3-desc', data.dish3Desc);
+            updateText('adv-title', data.advTitle);
+            updateText('adv-subtitle', data.advSub);
+            updateText('adv-1-t', data.adv1T);
+            updateText('adv-1-d', data.adv1D);
+            updateText('adv-2-t', data.adv2T);
+            updateText('adv-2-d', data.adv2D);
+            updateText('adv-3-t', data.adv3T);
+            updateText('adv-3-d', data.adv3D);
+            updateText('calc-head', data.calcHead);
+            updateText('calc-sub', data.calcSub);
+            updateText('calc-lbl-weight', data.calcLblWeight);
+            updateText('calc-lbl-norm', data.calcLblNorm);
+            updateText('calc-kcal-unit', data.calcKcalUnit);
+            updateText('calc-includes', data.calcIncludes);
+            updateText('calc-order-text', data.calcOrderText);
+            updateText('faq-title', data.faqTitle);
+            updateText('faq-sub', data.faqSub);
+            updateText('faq-q1', data.faqQ1);
+            updateText('faq-a1', data.faqA1);
+            updateText('faq-q2', data.faqQ2);
+            updateText('faq-a2', data.faqA2);
+            updateText('faq-q3', data.faqQ3);
+            updateText('faq-a3', data.faqA3);
         }
 
         const weightInput = document.getElementById('weight');
@@ -469,13 +494,15 @@
         const caloriesVal = document.getElementById('calories');
         const orderBtn = document.getElementById('order-btn');
 
-        weightInput.addEventListener('input', (e) => {
-            const w = e.target.value;
-            weightVal.textContent = w + ' კგ';
-            const cal = Math.round(w * 22 * 1.2);
-            caloriesVal.textContent = cal;
-            orderBtn.href = `https://wa.me/?text=გამარჯობა, გამოვთვალე ჩემი რაციონი: ${cal} კკალ.`;
-        });
+        if(weightInput) {
+            weightInput.addEventListener('input', (e) => {
+                const w = e.target.value;
+                if(weightVal) weightVal.textContent = w + ' კგ';
+                const cal = Math.round(w * 22 * 1.2);
+                if(caloriesVal) caloriesVal.textContent = cal;
+                if(orderBtn) orderBtn.href = `https://wa.me/?text=გამარჯობა, გამოვთვალე ჩემი რაციონი: ${cal} კკალ.`;
+            });
+        }
     </script>
 </body>
 </html>
