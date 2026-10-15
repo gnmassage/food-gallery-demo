@@ -32,9 +32,9 @@
     <!-- 1. 3-Second Splash Screen / Preloader -->
     <div id="splash-screen" class="fixed inset-0 z-[100] bg-lux-bg flex flex-col items-center justify-center transition-opacity duration-1000 p-6 text-center">
         <div class="relative flex flex-col items-center">
-            <!-- Logo Container -->
-            <div class="w-24 h-24 mb-6 rounded-2xl bg-lux-card border border-lux-border p-3 flex items-center justify-center shadow-2xl shadow-lux-emerald/20">
-                <img src="logo.png" onerror="this.onerror=null; this.src='https://placehold.co/100x100/12141d/10b981?text=FG';" alt="Food Gallery Logo" class="w-full h-full object-contain" />
+            <!-- Transparent Logo Container without Box -->
+            <div class="w-32 h-32 mb-6 flex items-center justify-center drop-shadow-[0_0_35px_rgba(16,185,129,0.35)]">
+                <img src="logo.png" onerror="this.onerror=null; this.src='https://placehold.co/120x120/090a0f/10b981?text=FG';" alt="Food Gallery Logo" class="w-full h-full object-contain" />
             </div>
             <h2 class="text-2xl md:text-3xl font-black tracking-widest text-white mb-3 uppercase">Food Gallery</h2>
             <p class="text-lux-glow text-sm md:text-base font-light max-w-md italic tracking-wide">
@@ -47,8 +47,9 @@
     <header class="sticky top-0 z-50 backdrop-blur-xl bg-lux-bg/80 border-b border-lux-border/60">
         <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-lux-card border border-lux-border p-1.5 flex items-center justify-center">
-                    <img src="logo.png" onerror="this.onerror=null; this.src='https://placehold.co/100x100/12141d/10b981?text=FG';" alt="Logo" class="w-full h-full object-contain" />
+                <!-- Clean Header Logo without Box -->
+                <div class="w-12 h-12 flex items-center justify-center drop-shadow-[0_0_15px_rgba(16,185,129,0.25)]">
+                    <img src="logo.png" onerror="this.onerror=null; this.src='https://placehold.co/100x100/090a0f/10b981?text=FG';" alt="Logo" class="w-full h-full object-contain" />
                 </div>
                 <span class="font-black text-xl tracking-wider text-white">FOOD GALLERY</span>
             </div>
