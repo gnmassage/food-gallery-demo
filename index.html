@@ -27,7 +27,12 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-lux-bg text-slate-100 font-sans antialiased min-h-screen selection:bg-lux-emerald selection:text-slate-950">
+<body class="bg-lux-bg text-slate-100 font-sans antialiased min-h-screen selection:bg-lux-emerald selection:text-slate-950 pb-16">
+
+    <!-- Floating WhatsApp Button (Animated) -->
+    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[90] bg-emerald-500 hover:bg-emerald-400 text-slate-950 p-4 rounded-full shadow-2xl shadow-emerald-500/50 transition-all duration-300 hover:scale-110 animate-bounce flex items-center justify-center">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </a>
 
     <!-- 1. 3-Second Splash Screen / Preloader -->
     <div id="splash-screen" class="fixed inset-0 z-[100] bg-lux-bg flex flex-col items-center justify-center transition-opacity duration-1000 p-6 text-center">
@@ -322,7 +327,7 @@
     <script>
         lucide.createIcons();
 
-        // Splash Screen (3 seconds)
+        // Splash Screen
         setTimeout(() => {
             const splash = document.getElementById('splash-screen');
             if(splash) {
@@ -418,75 +423,35 @@
             }
         };
 
-        // Safe Text Update Helper
-        function updateText(id, value, isHTML = false) {
-            const el = document.getElementById(id);
-            if (el) {
-                if (isHTML) el.innerHTML = value;
-                else el.textContent = value;
-            }
-        }
-
         function setLang(lang) {
             const data = i18n[lang];
+            
+            // Toggle Active Button Styles
             ['ka', 'en', 'ru'].forEach(l => {
                 const btn = document.getElementById(`lang-${l}`);
-                if(btn) {
-                    btn.className = (l === lang) ? "px-2.5 py-1 rounded-full bg-lux-emerald text-slate-950 font-bold transition-all" : "px-2.5 py-1 rounded-full hover:text-white transition-all";
+                if (btn) {
+                    if (l === lang) {
+                        btn.className = "px-2.5 py-1 rounded-full bg-lux-emerald text-slate-950 font-bold transition-all";
+                    } else {
+                        btn.className = "px-2.5 py-1 rounded-full hover:text-white transition-all";
+                    }
                 }
             });
 
-            updateText('splash-quote', data.splashQuote);
-            updateText('nav-phil', data.navPhil);
-            updateText('nav-adv', data.navAdv);
-            updateText('nav-proof', data.navProof);
-            updateText('nav-calc', data.navCalc);
-            updateText('nav-faq', data.navFaq);
-            updateText('btn-consult', data.btnConsult);
-            updateText('hero-tag', data.heroTag);
-            updateText('hero-title', data.heroTitle, true);
-            updateText('hero-desc', data.heroDesc);
-            updateText('hero-calc-btn', data.heroCalcBtn);
-            updateText('stat-1', data.stat1);
-            updateText('stat-2', data.stat2);
-            updateText('stat-3', data.stat3);
-            updateText('phil-1-t', data.phil1T);
-            updateText('phil-1-d', data.phil1D);
-            updateText('phil-2-t', data.phil2T);
-            updateText('phil-2-d', data.phil2D);
-            updateText('phil-3-t', data.phil3T);
-            updateText('phil-3-d', data.phil3D);
-            updateText('proof-title', data.proofTitle);
-            updateText('proof-sub', data.proofSub);
-            updateText('dish-1', data.dish1);
-            updateText('dish-1-desc', data.dish1Desc);
-            updateText('dish-2', data.dish2);
-            updateText('dish-2-desc', data.dish2Desc);
-            updateText('dish-3', data.dish3);
-            updateText('dish-3-desc', data.dish3Desc);
-            updateText('adv-title', data.advTitle);
-            updateText('adv-subtitle', data.advSub);
-            updateText('adv-1-t', data.adv1T);
-            updateText('adv-1-d', data.adv1D);
-            updateText('adv-2-t', data.adv2T);
-            updateText('adv-2-d', data.adv2D);
-            updateText('adv-3-t', data.adv3T);
-            updateText('adv-3-d', data.adv3D);
-            updateText('calc-head', data.calcHead);
-            updateText('calc-sub', data.calcSub);
-            updateText('calc-lbl-weight', data.calcLblWeight);
-            updateText('calc-lbl-norm', data.calcLblNorm);
-            updateText('calc-kcal-unit', data.calcKcalUnit);
-            updateText('calc-includes', data.calcIncludes);
-            updateText('calc-order-text', data.calcOrderText);
-            updateText('faq-title', data.faqTitle);
-            updateText('faq-sub', data.faqSub);
-            updateText('faq-q1', data.faqQ1);
-            updateText('faq-a1', data.faqA1);
-            updateText('faq-q2', data.faqQ2);
-            updateText('faq-a2', data.faqA2);
-            updateText('faq-q3', data.faqQ3);
-            updateText('faq-a3', data.faqA3);
+            // Safe Updates
+            for (const key in data) {
+                const el = document.getElementById(key.replace(/([A-Z])/g, "-$1").toLowerCase());
+                const altEl = document.getElementById(key);
+                const target = el || altEl;
+
+                if (target) {
+                    if (key === 'heroTitle') {
+                        target.innerHTML = data[key];
+                    } else {
+                        target.textContent = data[key];
+                    }
+                }
+            }
         }
 
         const weightInput = document.getElementById('weight');
