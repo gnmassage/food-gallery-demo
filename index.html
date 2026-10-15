@@ -29,18 +29,18 @@
 </head>
 <body class="bg-lux-bg text-slate-100 font-sans antialiased min-h-screen selection:bg-lux-emerald selection:text-slate-950 pb-16">
 
-    <!-- Floating WhatsApp Button (Animated) -->
+    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[90] bg-emerald-500 hover:bg-emerald-400 text-slate-950 p-4 rounded-full shadow-2xl shadow-emerald-500/50 transition-all duration-300 hover:scale-110 animate-bounce flex items-center justify-center">
         <i data-lucide="message-circle" class="w-7 h-7"></i>
     </a>
 
-    <!-- 1. 3-Second Splash Screen / Preloader -->
+    <!-- 1. Splash Screen -->
     <div id="splash-screen" class="fixed inset-0 z-[100] bg-lux-bg flex flex-col items-center justify-center transition-opacity duration-1000 p-6 text-center">
         <div class="relative flex flex-col items-center max-w-md w-full mx-auto">
             <div class="w-72 h-72 md:w-96 md:h-96 mb-2 flex items-center justify-center drop-shadow-[0_0_50px_rgba(16,185,129,0.45)]">
                 <img src="logo.png" onerror="this.onerror=null; this.src='https://placehold.co/350x350/090a0f/10b981?text=FOOD+GALLERY';" alt="Food Gallery Logo" class="w-full h-full object-contain" />
             </div>
-            <p id="splash-quote" class="text-lux-glow text-base md:text-lg font-light italic tracking-wide leading-relaxed px-2">
+            <p id="splashQuote" class="text-lux-glow text-base md:text-lg font-light italic tracking-wide leading-relaxed px-2">
                 "შენი დრო უფრო ღირებულია, ვიდრე სამზარეულოში გატარებული საათები."
             </p>
         </div>
@@ -57,11 +57,11 @@
             </div>
             
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-                <a href="#philosophy" id="nav-phil" class="hover:text-lux-glow transition-colors">რატომ ჩვენ?</a>
-                <a href="#advantages" id="nav-adv" class="hover:text-lux-glow transition-colors">უპირატესობები</a>
-                <a href="#proof" id="nav-proof" class="hover:text-lux-glow transition-colors">მენიუ</a>
-                <a href="#calculator" id="nav-calc" class="hover:text-lux-glow transition-colors">კალკულატორი</a>
-                <a href="#faq" id="nav-faq" class="hover:text-lux-glow transition-colors">კითხვები</a>
+                <a href="#philosophy" id="navPhil" class="hover:text-lux-glow transition-colors">რატომ ჩვენ?</a>
+                <a href="#advantages" id="navAdv" class="hover:text-lux-glow transition-colors">უპირატესობები</a>
+                <a href="#proof" id="navProof" class="hover:text-lux-glow transition-colors">მენიუ</a>
+                <a href="#calculator" id="navCalc" class="hover:text-lux-glow transition-colors">კალკულატორი</a>
+                <a href="#faq" id="navFaq" class="hover:text-lux-glow transition-colors">კითხვები</a>
             </nav>
 
             <div class="flex items-center gap-3 md:gap-4">
@@ -74,7 +74,7 @@
 
                 <a href="https://wa.me/" target="_blank" class="inline-flex items-center gap-2 bg-lux-emerald hover:bg-lux-glow text-slate-950 font-bold px-3.5 md:px-5 py-2 md:py-2.5 rounded-full text-xs md:text-sm transition-all shadow-lg shadow-lux-emerald/20">
                     <i data-lucide="sparkles" class="w-3.5 h-3.5 md:w-4 md:h-4"></i>
-                    <span id="btn-consult">კონსულტაცია</span>
+                    <span id="btnConsult">კონსულტაცია</span>
                 </a>
             </div>
         </div>
@@ -87,20 +87,20 @@
         <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lux-card border border-lux-border text-lux-glow text-xs md:text-sm font-medium mb-6 md:mb-8">
                 <i data-lucide="crown" class="w-4 h-4 text-lux-gold"></i>
-                <span id="hero-tag">ჯანსაღი და გემრიელი კვების მიწოდება</span>
+                <span id="heroTag">ჯანსაღი და გემრიელი კვების მიწოდება</span>
             </div>
             
-            <h1 id="hero-title" class="text-3xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.2] mb-6 md:mb-8">
+            <h1 id="heroTitle" class="text-3xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.2] mb-6 md:mb-8">
                 თქვენ იხდით არა უბრალოდ საკვებში, არამედ <span class="bg-gradient-to-r from-lux-emerald via-lux-glow to-teal-200 bg-clip-text text-transparent">დაზოგილ დროში</span>
             </h1>
             
-            <p id="hero-desc" class="text-base md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-8 md:mb-10 font-normal px-2">
+            <p id="heroDesc" class="text-base md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-8 md:mb-10 font-normal px-2">
                 დაივიწყეთ ყოველდღიური ფიქრი — "რა მოვამზადო დღეს?". მიიღეთ შეფ-მზარეულის მიერ მომზადებული, ჯანსაღი და დაბალანსებული საჭმელი პირდაპირ თქვენს სახლში.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 md:mb-16">
                 <a href="#calculator" class="w-full sm:w-auto bg-lux-emerald hover:bg-lux-glow text-slate-950 font-black px-8 py-4 rounded-2xl text-base transition-all shadow-xl shadow-lux-emerald/20 flex items-center justify-center gap-2">
-                    <span id="hero-calc-btn">შეარჩიე შენი მენიუ</span>
+                    <span id="heroCalcBtn">შეარჩიე შენი მენიუ</span>
                     <i data-lucide="arrow-right" class="w-5 h-5"></i>
                 </a>
             </div>
@@ -109,15 +109,15 @@
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 pt-8 md:pt-10 border-t border-lux-border/60 max-w-3xl mx-auto">
                 <div>
                     <div class="text-xl md:text-3xl font-black text-white">50,000+</div>
-                    <div id="stat-1" class="text-xs text-slate-400 mt-1">ჩააბარებული შეკვეთა</div>
+                    <div id="stat1" class="text-xs text-slate-400 mt-1">ჩააბარებული შეკვეთა</div>
                 </div>
                 <div>
                     <div class="text-xl md:text-3xl font-black text-lux-glow">98%</div>
-                    <div id="stat-2" class="text-xs text-slate-400 mt-1">კმაყოფილი კლიენტი</div>
+                    <div id="stat2" class="text-xs text-slate-400 mt-1">კმაყოფილი კლიენტი</div>
                 </div>
                 <div class="col-span-2 md:col-span-1">
                     <div class="text-xl md:text-3xl font-black text-white">5 ქალაქი</div>
-                    <div id="stat-3" class="text-xs text-slate-400 mt-1">ყოველდღიური მიწოდება</div>
+                    <div id="stat3" class="text-xs text-slate-400 mt-1">ყოველდღიური მიწოდება</div>
                 </div>
             </div>
         </div>
@@ -131,8 +131,8 @@
                     <div class="w-12 h-12 rounded-xl bg-lux-emerald/10 text-lux-glow flex items-center justify-center mb-4 mx-auto md:mx-0">
                         <i data-lucide="brain" class="w-6 h-6"></i>
                     </div>
-                    <h3 id="phil-1-t" class="font-extrabold text-white text-lg mb-2">სიმშვიდე და დასვენება</h3>
-                    <p id="phil-1-d" class="text-slate-300 text-sm leading-relaxed font-normal">
+                    <h3 id="phil1T" class="font-extrabold text-white text-lg mb-2">სიმშვიდე და დასვენება</h3>
+                    <p id="phil1D" class="text-slate-300 text-sm leading-relaxed font-normal">
                         ნუ დახარჯავთ დროს იმაზე ფიქრში, რა ჭამოთ დღეს. ჩვენ ყველაფერს წინასწარ ვგეგმავთ თქვენთვის.
                     </p>
                 </div>
@@ -141,8 +141,8 @@
                     <div class="w-12 h-12 rounded-xl bg-lux-emerald/10 text-lux-glow flex items-center justify-center mb-4 mx-auto md:mx-0">
                         <i data-lucide="clock" class="w-6 h-6"></i>
                     </div>
-                    <h3 id="phil-2-t" class="font-extrabold text-white text-lg mb-2">+60 საათი თვეში</h3>
-                    <p id="phil-2-d" class="text-slate-300 text-sm leading-relaxed font-normal">
+                    <h3 id="phil2T" class="font-extrabold text-white text-lg mb-2">+60 საათი თვეში</h3>
+                    <p id="phil2D" class="text-slate-300 text-sm leading-relaxed font-normal">
                         დაზოგეთ დრო, რომელსაც მაღაზიებში სიარულსა და კერძების მომზადებაში კარგავდით. დაუთმეთ ის ოჯახს.
                     </p>
                 </div>
@@ -151,8 +151,8 @@
                     <div class="w-12 h-12 rounded-xl bg-lux-emerald/10 text-lux-glow flex items-center justify-center mb-4 mx-auto md:mx-0">
                         <i data-lucide="zap" class="w-6 h-6"></i>
                     </div>
-                    <h3 id="phil-3-t" class="font-extrabold text-white text-lg mb-2">მეტი ენერგია</h3>
-                    <p id="phil-3-d" class="text-slate-300 text-sm leading-relaxed font-normal">
+                    <h3 id="phil3T" class="font-extrabold text-white text-lg mb-2">მეტი ენერგია</h3>
+                    <p id="phil3D" class="text-slate-300 text-sm leading-relaxed font-normal">
                         სწორად გადანაწილებული ცილები, ცხიმები და ნახშირწყლები მოგცემთ ძალას და ენერგიას მთელი დღე.
                     </p>
                 </div>
@@ -164,10 +164,10 @@
     <section id="proof" class="py-16 md:py-20">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-12 md:mb-16">
-                <h2 id="proof-title" class="text-2xl md:text-4xl font-extrabold text-white mb-3 md:mb-4">
+                <h2 id="proofTitle" class="text-2xl md:text-4xl font-extrabold text-white mb-3 md:mb-4">
                     რესტორნის გემო თქვენს სახლში
                 </h2>
-                <p id="proof-sub" class="text-slate-400 text-sm md:text-base">ყოველდღე ახალი, სუფთა და ძალიან გემრიელი კერძები</p>
+                <p id="proofSub" class="text-slate-400 text-sm md:text-base">ყოველდღე ახალი, სუფთა და ძალიან გემრიელი კერძები</p>
             </div>
 
             <div class="grid sm:grid-cols-3 gap-6">
@@ -175,24 +175,24 @@
                     <div class="h-40 md:h-48 rounded-xl bg-slate-900 border border-lux-border/50 mb-4 flex items-center justify-center text-slate-500 text-xs italic">
                         [ორაგულის სადილის ფოტო]
                     </div>
-                    <h4 id="dish-1" class="font-bold text-white text-base">ორაგულის ფილე ბოსტნეულით</h4>
-                    <p id="dish-1-desc" class="text-xs text-lux-glow mt-1">450 კკალ • ცილა: 38გ | ცხიმი: 18გ | ნახშირწყალი: 22გ</p>
+                    <h4 id="dish1" class="font-bold text-white text-base">ორაგულის ფილე ბოსტნეულით</h4>
+                    <p id="dish1Desc" class="text-xs text-lux-glow mt-1">450 კკალ • ცილა: 38გ | ცხიმი: 18გ | ნახშირწყალი: 22გ</p>
                 </div>
 
                 <div class="bg-lux-card border border-lux-border rounded-2xl p-4 text-center">
                     <div class="h-40 md:h-48 rounded-xl bg-slate-900 border border-lux-border/50 mb-4 flex items-center justify-center text-slate-500 text-xs italic">
                         [საუზმის ფოტო]
                     </div>
-                    <h4 id="dish-2" class="font-bold text-white text-base">პანკეიკი კენკრით და თაფლით</h4>
-                    <p id="dish-2-desc" class="text-xs text-lux-glow mt-1">320 კკალ • ცილა: 18გ | ცხიმი: 8გ | ნახშირწყალი: 42გ</p>
+                    <h4 id="dish2" class="font-bold text-white text-base">პანკეიკი კენკრით და თაფლით</h4>
+                    <p id="dish2Desc" class="text-xs text-lux-glow mt-1">320 კკალ • ცილა: 18გ | ცხიმი: 8გ | ნახშირწყალი: 42გ</p>
                 </div>
 
                 <div class="bg-lux-card border border-lux-border rounded-2xl p-4 text-center">
                     <div class="h-40 md:h-48 rounded-xl bg-slate-900 border border-lux-border/50 mb-4 flex items-center justify-center text-slate-500 text-xs italic">
                         [ვახშმის ფოტო]
                     </div>
-                    <h4 id="dish-3" class="font-bold text-white text-base">საქონლის სტეიკი კინოასთან ერთად</h4>
-                    <p id="dish-3-desc" class="text-xs text-lux-glow mt-1">510 კკალ • ცილა: 42გ | ცხიმი: 20გ | ნახშირწყალი: 30გ</p>
+                    <h4 id="dish3" class="font-bold text-white text-base">საქონლის სტეიკი კინოასთან ერთად</h4>
+                    <p id="dish3Desc" class="text-xs text-lux-glow mt-1">510 კკალ • ცილა: 42გ | ცხიმი: 20გ | ნახშირწყალი: 30გ</p>
                 </div>
             </div>
         </div>
@@ -202,10 +202,10 @@
     <section id="advantages" class="py-16 md:py-20 bg-lux-card/30 border-t border-lux-border">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-12 md:mb-16">
-                <h2 id="adv-title" class="text-2xl md:text-4xl font-extrabold text-white mb-3 md:mb-4">
+                <h2 id="advTitle" class="text-2xl md:text-4xl font-extrabold text-white mb-3 md:mb-4">
                     რატომ არის ჩვენი სერვისი საუკეთესო?
                 </h2>
-                <p id="adv-subtitle" class="text-slate-400 text-sm md:text-base">ყველაფერი გათვლილია თქვენს კომფორტზე</p>
+                <p id="advSubtitle" class="text-slate-400 text-sm md:text-base">ყველაფერი გათვლილია თქვენს კომფორტზე</p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -213,8 +213,8 @@
                     <div class="w-12 h-12 bg-lux-emerald/10 text-lux-glow rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="map-pin" class="w-6 h-6"></i>
                     </div>
-                    <h3 id="adv-1-t" class="font-bold text-white text-xl mb-3">5 ქალაქში მიწოდება</h3>
-                    <p id="adv-1-d" class="text-slate-300 text-sm leading-relaxed font-normal">
+                    <h3 id="adv1T" class="font-bold text-white text-xl mb-3">5 ქალაქში მიწოდება</h3>
+                    <p id="adv1D" class="text-slate-300 text-sm leading-relaxed font-normal">
                         ყოველ დილით მოგვაქვს საჭმელი თბილისში, ბათუმში, ქუთაისში, თელავსა და რუსთავში.
                     </p>
                 </div>
@@ -223,8 +223,8 @@
                     <div class="w-12 h-12 bg-lux-emerald/10 text-lux-glow rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="utensils-crossed" class="w-6 h-6"></i>
                     </div>
-                    <h3 id="adv-2-t" class="font-bold text-white text-xl mb-3">შეფ-მზარეულის მენიუ</h3>
-                    <p id="adv-2-d" class="text-slate-300 text-sm leading-relaxed font-normal">
+                    <h3 id="adv2T" class="font-bold text-white text-xl mb-3">შეფ-მზარეულის მენიუ</h3>
+                    <p id="adv2D" class="text-slate-300 text-sm leading-relaxed font-normal">
                         მრავალფეროვანი და გემრიელი საჭმელები, რომლებიც 2 კვირის განმავლობაში არ მეორდება.
                     </p>
                 </div>
@@ -233,8 +233,8 @@
                     <div class="w-12 h-12 bg-lux-emerald/10 text-lux-glow rounded-2xl flex items-center justify-center mb-6">
                         <i data-lucide="target" class="w-6 h-6"></i>
                     </div>
-                    <h3 id="adv-3-t" class="font-bold text-white text-xl mb-3">ზუსტი კალორიები</h3>
-                    <p id="adv-3-d" class="text-slate-300 text-sm leading-relaxed font-normal">
+                    <h3 id="adv3T" class="font-bold text-white text-xl mb-3">ზუსტი კალორიები</h3>
+                    <p id="adv3D" class="text-slate-300 text-sm leading-relaxed font-normal">
                         ექიმი-ნუტრიციოლოგის მიერ ზუსტად გათვლილი პორციები თქვენი ჯანმრთელობისთვის.
                     </p>
                 </div>
@@ -247,10 +247,10 @@
         <div class="max-w-3xl mx-auto px-4">
             <div class="bg-lux-card border border-lux-border rounded-3xl p-6 md:p-12 shadow-2xl relative overflow-hidden">
                 <div class="text-center mb-8 md:mb-10">
-                    <h2 id="calc-head" class="text-2xl md:text-3xl font-extrabold text-white mb-3">
+                    <h2 id="calcHead" class="text-2xl md:text-3xl font-extrabold text-white mb-3">
                         გამოითვალე შენი კალორიები
                     </h2>
-                    <p id="calc-sub" class="text-slate-400 text-sm font-normal">
+                    <p id="calcSub" class="text-slate-400 text-sm font-normal">
                         აირჩიე შენი წონა და გაიგე, რამდენი კალორია გჭირდება დღეში
                     </p>
                 </div>
@@ -258,26 +258,26 @@
                 <div class="space-y-8">
                     <div>
                         <div class="flex justify-between text-sm font-medium mb-3">
-                            <span id="calc-lbl-weight" class="text-slate-300">შენი წონა:</span>
+                            <span id="calcLblWeight" class="text-slate-300">შენი წონა:</span>
                             <span id="weight-val" class="text-lux-glow font-bold text-lg">70 კგ</span>
                         </div>
                         <input type="range" id="weight" min="45" max="130" value="70" class="w-full h-2 bg-lux-bg rounded-lg appearance-none cursor-pointer accent-lux-emerald">
                     </div>
 
                     <div class="bg-lux-bg border border-lux-border rounded-2xl p-6 text-center">
-                        <div id="calc-lbl-norm" class="text-xs text-slate-400 uppercase tracking-widest mb-1">
+                        <div id="calcLblNorm" class="text-xs text-slate-400 uppercase tracking-widest mb-1">
                             შენთვის რეკომენდებული ოდენობა:
                         </div>
                         <div class="text-3xl md:text-4xl font-black text-white my-2">
-                            ~<span id="calories">1840</span> <span id="calc-kcal-unit" class="text-lux-glow text-lg md:text-xl font-bold">კკალ/დღე</span>
+                            ~<span id="calories">1840</span> <span id="calcKcalUnit" class="text-lux-glow text-lg md:text-xl font-bold">კკალ/დღე</span>
                         </div>
-                        <p id="calc-includes" class="text-xs text-slate-400 mb-6 font-normal">
+                        <p id="calcIncludes" class="text-xs text-slate-400 mb-6 font-normal">
                             მოიცავს დღიურ 3-4-ჯერად მზა კვებას
                         </p>
 
                         <a id="order-btn" href="https://wa.me/?text=გამარჯობა, გამოვთვალე ჩემი რაციონი: 1840 კკალ." target="_blank" class="w-full bg-lux-emerald hover:bg-lux-glow text-slate-950 font-black py-3.5 md:py-4 px-6 rounded-xl text-sm transition-all inline-flex items-center justify-center gap-2 shadow-lg shadow-lux-emerald/20">
                             <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            <span id="calc-order-text">ამ პაკეტის შეკვეთა ჩატში</span>
+                            <span id="calcOrderText">ამ პაკეტის შეკვეთა ჩატში</span>
                         </a>
                     </div>
                 </div>
@@ -289,28 +289,28 @@
     <section id="faq" class="py-16 md:py-20 border-t border-lux-border">
         <div class="max-w-4xl mx-auto px-4">
             <div class="text-center mb-12 md:mb-16">
-                <h2 id="faq-title" class="text-2xl md:text-3xl font-extrabold text-white mb-3">ხშირად დასმული კითხვები</h2>
-                <p id="faq-sub" class="text-slate-400 text-sm">ყველაფერი, რაც აინტერესებთ ჩვენს კლიენტებს</p>
+                <h2 id="faqTitle" class="text-2xl md:text-3xl font-extrabold text-white mb-3">ხშირად დასმული კითხვები</h2>
+                <p id="faqSub" class="text-slate-400 text-sm">ყველაფერი, რაც აინტერესებთ ჩვენს კლიენტებს</p>
             </div>
 
             <div class="space-y-4">
                 <div class="bg-lux-card border border-lux-border rounded-2xl p-6">
-                    <h3 id="faq-q1" class="font-bold text-white text-base md:text-lg mb-2">როდის და როგორ მოგვაქვს საჭმელი?</h3>
-                    <p id="faq-a1" class="text-slate-300 text-sm leading-relaxed font-normal">
+                    <h3 id="faqQ1" class="font-bold text-white text-base md:text-lg mb-2">როდის და როგორ მოგვაქვს საჭმელი?</h3>
+                    <p id="faqA1" class="text-slate-300 text-sm leading-relaxed font-normal">
                         მიწოდება ხდება ყოველ დილით, 07:00-დან 10:00 საათამდე. კურიერი მოგიტანთ მთელი დღის გამზადებულ საჭმელს თქვენს კარამდე.
                     </p>
                 </div>
 
                 <div class="bg-lux-card border border-lux-border rounded-2xl p-6">
-                    <h3 id="faq-q2" class="font-bold text-white text-base md:text-lg mb-2">რომელ ქალაქებში მუშაობს Food Gallery?</h3>
-                    <p id="faq-a2" class="text-slate-300 text-sm leading-relaxed font-normal">
+                    <h3 id="faqQ2" class="font-bold text-white text-base md:text-lg mb-2">რომელ ქალაქებში მუშაობს Food Gallery?</h3>
+                    <p id="faqA2" class="text-slate-300 text-sm leading-relaxed font-normal">
                         ჩვენი სერვისი მოქმედებს თბილისში, ბათუმში, ქუთაისში, თელავსა და რუსთავში.
                     </p>
                 </div>
 
                 <div class="bg-lux-card border border-lux-border rounded-2xl p-6">
-                    <h3 id="faq-q3" class="font-bold text-white text-base md:text-lg mb-2">შეიძლება თუ არა საჭმლის შეცვლა, თუ რამე არ მიყვარს?</h3>
-                    <p id="faq-a3" class="text-slate-300 text-sm leading-relaxed font-normal">
+                    <h3 id="faqQ3" class="font-bold text-white text-base md:text-lg mb-2">შეიძლება თუ არა საჭმლის შეცვლა, თუ რამე არ მიყვარს?</h3>
+                    <p id="faqA3" class="text-slate-300 text-sm leading-relaxed font-normal">
                         დიახ. შეკვეთისას შეგიძლიათ გვითხრათ, რა პროდუქტი არ გიყვართ ან რაზე გაქვთ ალერგია, და ჩვენი მზარეული სხვა გემრიელი ინგრედიენტით შეცვლის მას.
                     </p>
                 </div>
@@ -438,12 +438,9 @@
                 }
             });
 
-            // Safe Updates
+            // Direct Translation mapping
             for (const key in data) {
-                const el = document.getElementById(key.replace(/([A-Z])/g, "-$1").toLowerCase());
-                const altEl = document.getElementById(key);
-                const target = el || altEl;
-
+                const target = document.getElementById(key);
                 if (target) {
                     if (key === 'heroTitle') {
                         target.innerHTML = data[key];
